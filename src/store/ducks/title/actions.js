@@ -1,6 +1,6 @@
-import * as types from './types';
+import * as types from './types'
 
-export const changeTitle = (val) => ({
+export const changeTitle = (newTitle) => ({
   type: types.CHANGE_TITLE,
-  payload: { val }
+  payload: newTitle 
 })

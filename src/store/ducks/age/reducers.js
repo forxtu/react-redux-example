@@ -1,4 +1,4 @@
-import { INCREASE, DECREASE, REMOVE_ITEM } from '../actions/actionTypes';
+import * as types from './types'
 
 const initialState = {
   age: 25,
@@ -8,21 +8,21 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
 
-  case INCREASE:
+  case types.INCREASE:
     return { 
       ...state,
       age: state.age + action.payload.val,
       history: state.history.concat({id: Math.random(), age: state.age + action.payload.val})
     }
 
-  case DECREASE:
+  case types.DECREASE:
     return { 
       ...state,
       age: state.age - action.payload.val,
       history: [...state.history, {id: Math.random(), age: state.age - action.payload.val}]
     }
 
-  case REMOVE_ITEM:
+  case types.REMOVE_ITEM:
     return { 
       ...state,
       history: state.history.filter(el => el.id !== action.payload.id)

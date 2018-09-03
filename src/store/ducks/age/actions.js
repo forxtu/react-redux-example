@@ -1,16 +1,16 @@
-import { INCREASE, DECREASE, REMOVE_ITEM } from "./actionTypes";
+import * as types from "./types"
 
 export const increase = (val) => ({
-  type: INCREASE,
+  type: types.INCREASE,
   payload: { val }
 })
 
 export const decrease = (val) => ({
-  type: DECREASE,
+  type: types.DECREASE,
   payload: { val }
 })
 
 export const removeItem = (id) => ({
-  type: REMOVE_ITEM,
+  type: types.REMOVE_ITEM,
   payload: { id }
 })
