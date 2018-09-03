@@ -1,0 +1,1 @@
+export const CHANGE_TITLE = 'title/CHANGE_TITLE'
